@@ -1,0 +1,100 @@
+.list-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.search-box {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  min-width: 260px;
+  font-size: 14px;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.swatch.red {
+  background-color: #fca5a5;
+}
+
+.swatch.yellow {
+  background-color: #fde68a;
+}
+
+.medicine-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.medicine-grid th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #6b7280;
+  border-bottom: 2px solid #e5e7eb;
+  padding: 10px 8px;
+}
+
+.medicine-grid td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #f0f1f3;
+  font-size: 14px;
+}
+
+.row-expiring {
+  background-color: #fca5a5;
+}
+
+.row-low-stock {
+  background-color: #fde68a;
+}
+
+.empty-row {
+  text-align: center;
+  color: #9ca3af;
+  padding: 24px;
+}
+
+.loading {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.error-banner {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+}

@@ -1,0 +1,5 @@
+export const environment = {
+  production: false,
+  apiBaseUrl: 'https://localhost:7117/api',
+  accessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzg3MDQ3Nzg4LCJpc3MiOiJQaGFybWFjeUFwaSIsImF1ZCI6IlBoYXJtYWN5Q2xpZW50cyJ9.yQKhnjsUPWKAAwEnfFJN_WpvCkTS9h9jrkhfgnB8C3c'
+};

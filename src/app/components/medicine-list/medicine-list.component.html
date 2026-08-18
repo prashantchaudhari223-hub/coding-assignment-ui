@@ -1,0 +1,46 @@
+<app-medicine-add (medicineAdded)="loadMedicines()"></app-medicine-add>
+
+<div class="list-card">
+  <div class="list-header">
+    <h2>Medicines</h2>
+    <input
+      class="search-box"
+      type="text"
+      placeholder="Search by name, brand or notes…"
+      [formControl]="searchControl"
+    />
+  </div>
+
+  <div class="legend">
+    <span class="legend-item"><span class="swatch red"></span> Expiring in &lt; 30 days</span>
+    <span class="legend-item"><span class="swatch yellow"></span> Quantity in stock &lt; 10</span>
+  </div>
+
+  <p *ngIf="loadError" class="error-banner">{{ loadError }}</p>
+
+  <table class="medicine-grid" *ngIf="!loadError">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Brand</th>
+        <th>Expiry Date</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let medicine of medicines" [ngClass]="rowClass(medicine)">
+        <td>{{ medicine.fullName }}</td>
+        <td>{{ medicine.brand }}</td>
+        <td>{{ medicine.expiryDate | date: 'mediumDate' }}</td>
+        <td>{{ medicine.quantity }}</td>
+        <td>{{ medicine.price | currency: 'INR' }}</td>
+      </tr>
+      <tr *ngIf="!isLoading && medicines.length === 0">
+        <td colspan="5" class="empty-row">No medicines found.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="isLoading" class="loading">Loading…</p>
+</div>
